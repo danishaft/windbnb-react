@@ -1,0 +1,68 @@
+@use '../styles/style.scss' as g;
+
+.container{
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 2rem;
+}
+.heading{
+    @include g.font-size(1.125rem, 15vw, 2rem);
+    color: g.$black;
+}
+.houses{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+.house > img {
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    margin: .7em 0rem;
+}
+.content__top{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .3rem;
+}
+.house__type{
+    @include g.font-size(.6rem, 12vw, 0.7rem);
+    text-align: center;
+    margin-right: .5rem;
+    border: 1px solid g.$black;
+    border-radius: 1.2rem;
+    padding: .2em .6em;
+    color: g.$grey1;
+}
+.house__info{
+    @include g.font-size(0.7rem, 13vw, .9rem);
+    margin-right: auto;
+    color: g.$grey2;
+}
+.house__rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include g.font-size(.9rem, 20vw, 1rem);
+}
+.house__desc{
+    @include g.font-size(1rem, 20vw, 1.1rem);
+}
+.house__rating > .star {
+    color: g.$red;
+    margin-right: .4em;
+}
+
+//media queries
+@include g.phone{
+    .container{
+        padding: 2rem;
+    }
+}
+
+@include g.tablet{
+    .container{
+        padding: 2rem;
+    }
+}

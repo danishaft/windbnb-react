@@ -1,0 +1,17 @@
+//breakpoints
+$phone: 38rem;
+$tablet: 48em;
+$desktop: 64em;
+$monitor: 80em;
+
+@mixin phone{
+    @media(min-width: $phone){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media(min-width: $tablet){
+        @content;
+    }
+}
