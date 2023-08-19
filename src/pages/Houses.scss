@@ -18,25 +18,27 @@
     width: 100%;
     aspect-ratio: 1.5 / 1;
     object-fit: cover;
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     margin: .7em 0rem;
 }
 .content__top{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: .3rem;
 }
 .house__type{
     @include g.font-size(.6rem, 12vw, 0.7rem);
     text-align: center;
-    margin-right: .5rem;
+    margin-right: .4rem;
     border: 1px solid g.$black;
-    border-radius: 1.2rem;
+    border-radius: .7rem;
     padding: .2em .6em;
     color: g.$grey1;
 }
 .house__info{
-    @include g.font-size(0.7rem, 13vw, .9rem);
+    @include g.font-size(0.7rem, 13vw, .8rem);
     margin-right: auto;
     color: g.$grey2;
 }
@@ -44,14 +46,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include g.font-size(.9rem, 20vw, 1rem);
+    @include g.font-size(.9rem, 17vw, 1rem);
 }
 .house__desc{
-    @include g.font-size(1rem, 20vw, 1.1rem);
+    @include g.font-size(1rem, 18vw, 1rem);
 }
 .house__rating > .star {
     color: g.$red;
-    margin-right: .4em;
+    margin-right: .3rem;
 }
 
 //media queries

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish&family=Poppins:wght@500&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -35,6 +36,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -81,6 +83,13 @@ $grey2:#828282;
 $grey3:#BDBDBD;
 $white: #F2F2F2;
 
+//Additional font
+@mixin poppins{
+  font-family: 'Poppins', sans-serif;
+}
+@mixin mulish{
+  font-family: 'Mulish', sans-serif;
+}
 //font-size
 @mixin font-size($min, $val, $max){
   font-size: clamp($min, $val, $max);

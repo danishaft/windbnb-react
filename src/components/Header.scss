@@ -1,0 +1,35 @@
+ @use "../styles/style.scss" as g;
+ .header{
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 2rem;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__logo{
+        @include g.font-size(1.125rem, 15vw, 2rem);
+        @include g.poppins;
+        color: g.$red;
+    }
+    &__menu{
+        width: max-content;
+    }
+    &__btn{
+        max-width: 10rem;
+        height: 100%;
+        outline: none;
+        border: .006rem solid g.$white;
+        background: #ffff;
+        color: g.$grey3;
+        @include g.font-size(.7rem, 20vw, .9rem);
+    }
+    &__btn:first-child {
+        border-radius: .8rem 0 0 .8rem ;
+        color: g.$black;
+    }
+    &__btn:last-child{
+        border-radius: 0 .8rem  .8rem 0 ;
+    }
+ }
