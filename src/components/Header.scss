@@ -7,14 +7,16 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 2rem;
     }
-    &__logo{
-        @include g.font-size(1.125rem, 15vw, 2rem);
-        @include g.poppins;
-        color: g.$red;
+    &__logo > img{
+        width: 9em;
     }
     &__menu{
+        margin-left: auto;
         width: max-content;
+        border-radius: .8rem;
+        box-shadow: 7px 10px 10px -8px rgba(0,0,0,0.1),0px 6px 10px -17px rgba(0,0,0,0.1);
     }
     &__btn{
         max-width: 10rem;
@@ -23,7 +25,9 @@
         border: .006rem solid g.$white;
         background: #ffff;
         color: g.$grey3;
-        @include g.font-size(.7rem, 20vw, .9rem);
+        @include g.font-size(.7rem, 20vw, .8rem);
+        padding: .9em;
+        cursor: pointer;
     }
     &__btn:first-child {
         border-radius: .8rem 0 0 .8rem ;
@@ -32,4 +36,136 @@
     &__btn:last-child{
         border-radius: 0 .8rem  .8rem 0 ;
     }
+    &__btn:focus{
+        border: .006rem solid g.$black;
+    }
  }
+ .search__icon{
+    color: g.$red;
+    margin: 0 .5rem;
+ }
+ .modal{
+    position: absolute;
+    background: rgb(250, 252, 253);
+    box-shadow: 7px 12px 12px 1px rgba(0,0,0,0.1),0px 6px 10px -17px rgba(0,0,0,0.1);
+    top: 0;
+    right: 0;
+    left: 0;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 0 2rem;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .8rem 0;
+        @include g.font-size(.8rem, 20vw, 1.2rem);
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        border-radius: .8rem;
+        margin-bottom: 2rem;
+    }
+ }
+ .input__data{
+    position: relative;
+ }
+ .input__data > input{
+    width: 100%;
+    border: .006rem solid g.$white;
+    padding: 0 1.8rem;
+    line-height: 5;
+    color: g.$grey3;
+ }
+ .input__data > label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.7rem;
+    margin-top: .4rem;
+    font-weight: bold;
+ }
+ #location{
+    border-radius: .8rem .8rem 0 0  ;
+ }
+ #guests{
+    border-radius: 0 0 .8rem .8rem;
+ }
+ button[type=submit]{
+    background: g.$red;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    color: g.$white;
+    padding: .4em .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+ }
+ .submit__icon{
+    margin-right: .5em;
+ }
+
+ //options section style
+ .options{
+    display: flex;
+    padding: 0 1.5rem;
+    &__location{
+        display: flex;
+        flex-direction: column;
+        color: g.$grey1;
+      //   display: none;
+    }
+    &__guests{
+        @include g.font-size(.7rem, 20vw, .9rem);
+        color: g.$black;
+    }
+ }
+
+ //location
+ .location{
+    @include g.font-size(.7rem, 20vw, .9rem);
+    margin-bottom: 1.2em;
+    cursor: pointer;
+    &__icon{
+        margin-right: .7em;
+    }
+ }
+
+ //guests
+ .guests--type{
+    margin-bottom: 2rem;
+ }
+ .guests--type > p{
+    color: g.$grey3;
+    margin-bottom: .6rem;
+ }
+ .counter > button{
+    border: .05rem solid g.$grey2;
+    border-radius: .3rem;
+    background: #ffff;
+ }
+ .counter > span{
+   margin: 0 1rem;
+ }
+ .close{
+   display: none;
+ }
+ .open{
+   display: block;
+ }
+ .flex{
+   display: flex;
+ }
+ .setModal{
+   cursor: pointer;
+ }
+
+ //responsive
+ @include g.tablet{
+   .header{
+       background: g.$red;
+   }
+}
